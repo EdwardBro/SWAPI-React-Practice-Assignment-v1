@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.scss";
+import Toggle from "./components/Common/Toggle";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <div className="App-header-container">
+          <header className="App-header">
+            <h1 className="App-title">SW species and people!</h1>
+            <h2 className="App-subtitle">SWAPi practice assignment</h2>
+          </header>
+        </div>
+        <body>
+          <br />
+          <Toggle />
+        </body>
+        <div className="footer-content">
+          Star Wars
+          {/* By EdwardBro */}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
