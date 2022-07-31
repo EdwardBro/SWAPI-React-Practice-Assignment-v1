@@ -8,26 +8,26 @@ class Species extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      page: []
+      page: [],
     };
   }
 
   componentWillMount() {
-    const url = `https://swapi.co/api/species/`;
+    const url = `https://swapi.dev/api/species/`;
 
     axios
       .get(url)
-      .then(res => {
+      .then((res) => {
         console.log(res);
         this.setState({
-          data: res.data.results
+          data: res.data.results,
         });
 
         if (res.data.next !== null) {
           this.getAllPages(res.data.next, res.data.results);
         }
       })
-      .catch(error => {
+      .catch((error) => {
         console.log(error);
       });
   }
@@ -35,16 +35,16 @@ class Species extends Component {
   getAllPages(nextpage, data) {
     axios
       .get(nextpage)
-      .then(res => {
+      .then((res) => {
         this.setState({
-          data: data.concat(res.data.results)
+          data: data.concat(res.data.results),
         });
 
         if (res.data.next !== null) {
           this.getAllPages(res.data.next, this.state.data);
         }
       })
-      .catch(err => {
+      .catch((err) => {
         console.log(err);
       });
   }
@@ -54,48 +54,48 @@ class Species extends Component {
       {
         Header: "Name",
         accessor: "name",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Classification",
         accessor: "classification",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Designation",
         accessor: "designation",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Average Height",
         accessor: "average_height",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Skin Colors",
         accessor: "skin_colors",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Hair Colors",
         accessor: "hair_colors",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Eye Colors",
         accessor: "eye_colors",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Average Lifespan",
         accessor: "average_lifespan",
-        sortable: true
+        sortable: true,
       },
       {
         Header: "Language",
         accessor: "language",
-        sortable: true
-      }
+        sortable: true,
+      },
     ];
 
     return (
