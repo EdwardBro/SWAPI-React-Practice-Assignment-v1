@@ -26,11 +26,12 @@ body{
 
   .App-subtitle {
     font-size: 22px;
+    text-shadow: 2px 2px 2px #bd9700;
   }
 
   .App-title {
     font-size: 40px;
-    text-shadow: 4px 4px 4px #bd9700 !important;
+    text-shadow: 2px 2px 2px #bd9700;
   }
 }
 
@@ -50,7 +51,7 @@ body{
   margin: 4px 2px;
   cursor: pointer;
   font-family: "Star Wars";
-  text-shadow: 4px 4px 4px #a39800;
+  text-shadow: 2px 2px 2px #a39800;
 }
 
 .footer-container {
