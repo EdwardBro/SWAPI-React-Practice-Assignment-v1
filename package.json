@@ -2,7 +2,6 @@
   "name": "practice-assignment",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://swapi-react-practice-assignment-v1-edwardbro.vercel.app/",
   "dependencies": {
     "axios": "^0.21.2",
     "paginate-array": "^2.1.0",
