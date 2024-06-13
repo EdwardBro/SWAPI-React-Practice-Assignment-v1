@@ -7,7 +7,7 @@
     "paginate-array": "^2.1.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.1",
+    "react-scripts": "5.0.1",
     "react-table": "^6.10.0",
     "reactstrap": "^8.0.1",
     "sass-loader": "^8.0.0",
